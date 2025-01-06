@@ -60,13 +60,13 @@ class StompClient {
     */
     void begin() {
       // connect to websocket
-      _wsClient.begin(_host, _port, _socketUrl());
+      _wsClient.begin(_host, _port, _socketUrl().c_str());
       _wsClient.setExtraHeaders();
     }
 
     void beginSSL() {
       // connect to websocket
-      _wsClient.beginSSL(_host, _port, _socketUrl());
+      _wsClient.beginSSL(_host, _port, _socketUrl().c_str());
       _wsClient.setExtraHeaders();
     }
 
